@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.azinore.braintrainer.MainActivity">
+
+
+    <TextView
+        android:text="Ready!"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_row="0"
+        android:layout_column="1"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        android:layout_rowSpan="1"
+        android:layout_columnSpan="1"
+        android:id="@+id/sum"
+        android:textSize="30sp"
+        android:backgroundTint="@android:color/holo_green_light"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="1:00"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_row="0"
+        android:layout_column="0"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        android:layout_rowSpan="1"
+        android:layout_columnSpan="1"
+        android:id="@+id/timer"
+        android:textSize="18sp" />
+
+    <TextView
+        android:text="0/0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/score"
+        android:textSize="18sp" />
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/buttonPlay"
+        android:layout_below="@+id/sum">
+
+
+
+
+    <Button
+            android:text="01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tL"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:layout_gravity="fill"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_rowSpan="1"
+            android:layout_columnSpan="1"
+            android:tag="0"
+            android:backgroundTint="@android:color/holo_red_light"
+            android:onClick="clickBut"
+            android:textSize="30sp" />
+        <Button
+            android:text="02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tR"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:layout_gravity="fill"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_rowSpan="1"
+            android:layout_columnSpan="1"
+            android:tag="1"
+            android:backgroundTint="@android:color/holo_blue_light"
+            android:onClick="clickBut"
+            android:textSize="30sp" />
+        <Button
+            android:text="03"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lB"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:layout_gravity="fill"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_rowSpan="1"
+            android:layout_columnSpan="1"
+            android:tag="2"
+            android:backgroundTint="@android:color/holo_green_light"
+            android:onClick="clickBut"
+            android:textSize="30sp" />
+        <Button
+            android:text="04"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rB"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:layout_gravity="fill"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_rowSpan="1"
+            android:layout_columnSpan="1"
+            android:tag="3"
+            android:backgroundTint="@android:color/holo_purple"
+            android:onClick="clickBut"
+            android:textSize="30sp" />
+
+    </GridLayout>
+
+    <Button
+        android:text="Normal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/buttonPlay"
+        android:onClick="playAgain"
+        android:tag="25"/>
+
+    <Button
+        android:text="Easy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/buttonEasy"
+        android:onClick="playAgain"
+        android:tag="10"/>
+
+    <Button
+        android:text="Hard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/buttonHard"
+        android:onClick="playAgain"
+        android:tag="50"/>
+
+
+</RelativeLayout>
